@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.pagination {
+  display: flex;
+  margin: 3px;
+  font-size: 16px;
+}
+
+.pagination > li {
+  margin: 0 12px;
+}
+
+.pagination > li > a {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  outline: none;
+  z-index: 100;
+  cursor: pointer;
+}
+
+.pagination > li > a ::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -100;
+}
